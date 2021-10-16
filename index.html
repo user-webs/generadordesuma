@@ -1,0 +1,110 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            text-align: left;
+            color: #000000;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        h1 {
+            font-family: Cambria;
+            font-size: 30px;
+            text-align: center;
+            color: #2874A6;
+        }
+
+        .centro {
+            text-align: center;
+        }
+
+        .izquierda {
+            text-align: left;
+        }
+
+        .derecha {
+            text-align: right;
+        }
+
+        .segoe {
+            font-family: 'Segoe MDL2 Assets' 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .centro {
+            font-family: Cambria;
+        }
+
+        .mayusculas {
+            text-transform: uppercase;
+        }
+
+        .minusculas {
+            text-transform: lowercase;
+        }
+
+        .primeramayuscula {
+            text-transform: capitalize;
+        }
+
+        a:link {
+            color: #5DADE2;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #F5CBA7;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: #1A5276;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #1A5276;
+            text-decoration: underline;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://img.freepik.com/vector-gratis/fondo-dibujos-animados-elementos-matematicas_23-2148157674.jpg?size=338&ext=jpg" />
+    <title>
+        Generador de c&aacute;lculos matem&aacute;ticos
+    </title>
+</head>
+<body>
+    <h1>
+        Generar c&aacute;lculo matem&aacute;tico
+    </h1>
+    <center>
+        <button onclick="generarOperacion()">
+            Generar suma
+        </button>
+    </center>
+    <script>
+        var numero1;
+        var numero2;
+        var resultado;
+        var miResultado;
+        function generarOperacion() {
+            numero1 = Math.random() * 1000;
+            numero2 = Math.random() * 1000;
+            numero1 = Math.trunc(numero1);
+            numero2 = Math.trunc(numero2);
+            resultado = numero1 + numero2;
+            miResultado = prompt('Resultado de ' + numero1 + ' + ' + numero2);
+            if (miResultado == resultado) {
+                alert('Tu respuesta es correcta');
+            }
+            if (miResultado != resultado) {
+                alert('Tu respuesta es incorrecta. Has introducido ' + miResultado + ', pero la respuesta correcta es ' + resultado);
+            }
+        }
+    </script>
+</body>
+</html>
